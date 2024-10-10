@@ -7,6 +7,16 @@
 //   vowels('Why do you ask?') --> 4
 //   vowels('Why?') --> 0
 
-function vowels(str) {}
+function vowels(str) {
+    const vowelSet = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']);
+    let count = 0;
 
+    for (let char of str) {
+        if (vowelSet.has(char)) {
+            count++;
+        }
+    }
+
+    return count;
+}
 module.exports = vowels;
